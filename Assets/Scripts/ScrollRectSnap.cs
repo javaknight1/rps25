@@ -6,8 +6,9 @@ using UnityEngine.UI;
 public class ScrollRectSnap : MonoBehaviour {
 
     public RectTransform panel; // To hold the ScrollPanel
-    public Button[] bttn;
+    public GameObject[] bttn;
     public RectTransform center; // Center to compare the distance for each button
+    public int numOfCards;
 
     public float[] distance; // All button's distance to the center
     public float[] distReposition;
@@ -17,7 +18,23 @@ public class ScrollRectSnap : MonoBehaviour {
 
     public void Start()
     {
+        bttn = new GameObject[numOfCards];
+
         // TODO: Read config file and generate Buttons
+        GameObject prefab = Resources.Load("Card") as GameObject;
+        Card card = new Card();
+        card.weaponName = "Rock";
+        card.description = "Not just an ordinary rock. This special rock can easily defeat half of the enemies here. He may seem small and weak, but he sure can pack a punch when you least expect it.";
+        card.artwork = Resources.Load<Sprite>("Sprites/Weapons/rock");
+        for (int i = 0; i < numOfCards; i++)
+        {
+            GameObject go = Instantiate(prefab) as GameObject;
+            go.transform.position = new Vector2(i * 300f, 0);
+            go.GetComponent<CardDisplay>().DefineCard(card);
+            go.transform.SetParent(panel.transform, false);
+
+            bttn[i] = go;
+        }
 
         int bttnLen = bttn.Length;
         distance = new float[bttnLen];
