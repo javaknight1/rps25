@@ -226,7 +226,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b25351ddf2533437f95bee6a58bf2665, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  card: {fileID: 0}
+  artworkImage: {fileID: 114205622380532676}
+  weaponNameText: {fileID: 114509245920797968}
+  descriptionText: {fileID: 114108022673561340}
 --- !u!114 &114820052568067064
 MonoBehaviour:
   m_ObjectHideFlags: 1

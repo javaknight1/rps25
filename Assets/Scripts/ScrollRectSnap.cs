@@ -1,7 +1,9 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using System.IO;
 
 public class ScrollRectSnap : MonoBehaviour {
 
@@ -16,18 +18,32 @@ public class ScrollRectSnap : MonoBehaviour {
     private int bttnDistance; // Will hold the distance between the buttons
     private int minButtonNum; // To hold the number of the button with the smallest distance to center
 
+    private const string weaponsListFileName = "weapons.json";
+    private WeaponData[] weapons;
+
     public void Start()
     {
-        bttn = new GameObject[numOfCards];
-
-        // TODO: Read config file and generate Buttons
-        GameObject prefab = Resources.Load("Card") as GameObject;
-        Card card = new Card();
-        card.weaponName = "Rock";
-        card.description = "Not just an ordinary rock. This special rock can easily defeat half of the enemies here. He may seem small and weak, but he sure can pack a punch when you least expect it.";
-        card.artwork = Resources.Load<Sprite>("Sprites/Weapons/rock");
-        for (int i = 0; i < numOfCards; i++)
+        string filePath = Path.Combine(Application.streamingAssetsPath, weaponsListFileName);
+        if(File.Exists(filePath))
         {
+            string dataAsJson = File.ReadAllText(filePath);
+            WeaponsData weaponData = WeaponsData.CreateFromJSON(dataAsJson);
+            this.weapons = weaponData.weapons;
+        }
+        else
+        {
+            this.weapons = new WeaponData[0];
+        }
+
+        GameObject prefab = Resources.Load("Card") as GameObject;
+        bttn = new GameObject[weapons.Length];
+        for (int i = 0; i < weapons.Length; i++)
+        {
+            Card card = new Card();
+            card.weaponName = weapons[i].weapon;
+            card.description = weapons[i].description;
+            card.artwork = Resources.Load<Sprite>("Sprites/Weapons/" + weapons[i].weapon);
+
             GameObject go = Instantiate(prefab) as GameObject;
             go.transform.position = new Vector2(i * 300f, 0);
             go.GetComponent<CardDisplay>().DefineCard(card);
@@ -36,9 +52,9 @@ public class ScrollRectSnap : MonoBehaviour {
             bttn[i] = go;
         }
 
-        int bttnLen = bttn.Length;
-        distance = new float[bttnLen];
-        distReposition = new float[bttnLen];
+       
+        distance = new float[weapons.Length];
+        distReposition = new float[weapons.Length];
 
         // Get distance between buttons
         bttnDistance = (int)Mathf.Abs(bttn[1].GetComponent<RectTransform>().anchoredPosition.x - bttn[0].GetComponent<RectTransform>().anchoredPosition.x);

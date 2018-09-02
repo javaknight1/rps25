@@ -1,0 +1,102 @@
+﻿{ "weapons": [
+  {
+    "weapon": "rock",
+    "description": "Not just an ordinary rock. This special rock can easily defeat half of the enemies here. He may seem small and weak, but he sure can pack a punch when you least expect it."
+  },
+  {
+    "weapon": "male",
+    "description": "He may seem strong, which he is, but with power comes many weaknesses."
+  },
+  {
+    "weapon": "female",
+    "description": "She may seem like a weak foe, but don't underestimate her cunningness and mood swings."
+  },
+  {
+    "weapon": "dragon",
+    "description": "You've probably read about him in ancient books. The stories about him are lengendary. All stories you have read are true. Careful of his power, as it takes a strong and wise warrior to harrness his power."
+  },
+  {
+    "weapon": "alien",
+    "description": "Coming from another world, he brings power never seen by any man on Earth. Prepare for unexpected sorcery that comes from his ancient ancestors."
+  },
+  {
+    "weapon": "axe",
+    "description": "A weapon only yielded by the most burly of men with plaid shirts. Very few have had the ability to tap into it's full potential of power. Do you have the skills neccessary to weild this weapon?"
+  },
+  {
+    "weapon": "fire",
+    "description": "One of the earliest weapons discovered by man, yet it's power still haunts and injects fear into man's heart. Weild this weapon with caution or it will destroy you."
+  },
+  {
+    "weapon": "tree",
+    "description": "A core mechanism to nature that provides the very air for life to breathe. Some may view as harmless, but with the right person at it's side, can conquier any mountain."
+  },
+  {
+    "weapon": "wind",
+    "description": ""
+  },
+  {
+    "weapon": "sun",
+    "description": ""
+  },
+  {
+    "weapon": "sponge",
+    "description": ""
+  },
+  {
+    "weapon": "snake",
+    "description": ""
+  },
+  {
+    "weapon": "nuke",
+    "description": ""
+  },
+  {
+    "weapon": "moon",
+    "description": "The single source of light in darkness provides it with power only few can understand. "
+  },
+  {
+    "weapon": "monkey",
+    "description": ""
+  },
+  {
+    "weapon": "lightning",
+    "description": ""
+  },
+  {
+    "weapon": "gun",
+    "description": ""
+  },
+  {
+    "weapon": "dynamite",
+    "description": ""
+  },
+  {
+    "weapon": "devil",
+    "description": "He may be seen as a myth, but he is very real. Secretly walking the streets and seeking whom he may devour. Stay and focus on your course, or you may have an appointment with the Devil."
+  },
+  {
+    "weapon": "cup",
+    "description": "Fragil, yet with the right ingredients can prevent extinction."
+  },
+  {
+    "weapon": "cockroach",
+    "description": "The smallest of enemies, yet one of the most powerful. Powerful enough to withstand the likes of a nuclear holocaust. Don't allow this little foe to slip through your hands for one second."
+  },
+  {
+    "weapon": "wolf",
+    "description": "Quick. Cunning. Sly. Vicious. The perfect combination of elements to create a beast that will strike into any human. If you lose control, this beast will turn on you when it's gets the chance."
+  },
+  {
+    "weapon": "water",
+    "description": "Very little can harmless. But in numbers, can be the dead of humanity."
+  },
+  {
+    "weapon": "rock",
+    "description": ""
+  },
+  {
+    "weapon": "rock",
+    "description": ""
+  }
+]}
