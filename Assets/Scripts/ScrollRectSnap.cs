@@ -10,7 +10,6 @@ public class ScrollRectSnap : MonoBehaviour {
     public RectTransform panel; // To hold the ScrollPanel
     public GameObject[] bttn;
     public RectTransform center; // Center to compare the distance for each button
-    public int numOfCards;
 
     public float[] distance; // All button's distance to the center
     public float[] distReposition;
@@ -32,6 +31,7 @@ public class ScrollRectSnap : MonoBehaviour {
         }
         else
         {
+            // TODO: Handle an error case here
             this.weapons = new WeaponData[0];
         }
 
@@ -51,7 +51,6 @@ public class ScrollRectSnap : MonoBehaviour {
 
             bttn[i] = go;
         }
-
        
         distance = new float[weapons.Length];
         distReposition = new float[weapons.Length];
