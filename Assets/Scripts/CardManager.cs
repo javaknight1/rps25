@@ -9,7 +9,7 @@ public class CardManager : MonoBehaviour {
     private const string weaponsListFileName = "weapons.json";
 
     // Use this for initialization
-    void Start () {
+    public CardManager() {
         string filePath = Path.Combine(Application.streamingAssetsPath, weaponsListFileName);
         if (File.Exists(filePath))
         {
