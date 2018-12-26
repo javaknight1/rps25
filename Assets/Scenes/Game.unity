@@ -620,7 +620,6 @@ MonoBehaviour:
   panel: {fileID: 1436147742}
   bttn: []
   center: {fileID: 2080850085}
-  numOfCards: 10
   distance: []
   distReposition: []
 --- !u!224 &2024943040
@@ -638,7 +637,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 320, y: 480}
+  m_AnchoredPosition: {x: 583, y: 364}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2024943041
