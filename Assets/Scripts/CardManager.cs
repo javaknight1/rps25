@@ -5,11 +5,13 @@ using System.IO;
 
 public class CardManager : MonoBehaviour {
 
+    private static CardManager Instance = null;
+
     private WeaponData[] weapons;
     private const string weaponsListFileName = "weapons.json";
 
     // Use this for initialization
-    public CardManager() {
+    private CardManager() {
         string filePath = Path.Combine(Application.streamingAssetsPath, weaponsListFileName);
         if (File.Exists(filePath))
         {
@@ -24,11 +26,26 @@ public class CardManager : MonoBehaviour {
         }
     }
 
+    public static CardManager GetInstance()
+    {
+        if(Instance == null)
+        {
+            Instance = new CardManager();
+        }
+
+        return Instance;
+    }
+
     public int numOfWeapons()
     {
         return weapons.Length;
     }
-	
+
+    public WeaponData getWeaponObject(int index)
+    {
+        return weapons[index];
+    }
+
     public string getWeaponName(int index)
     {
         return weapons[index].weapon;

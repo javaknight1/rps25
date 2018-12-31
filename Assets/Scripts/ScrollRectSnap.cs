@@ -16,12 +16,10 @@ public class ScrollRectSnap : MonoBehaviour {
     private bool dragging = false; // Will be true while we drag panel
     private int bttnDistance; // Will hold the distance between the buttons
     private int minButtonNum; // To hold the number of the button with the smallest distance to center
-
-    private CardManager cardManager;
-
+    
     public void Start()
     {
-        cardManager = new CardManager();
+        CardManager cardManager = CardManager.GetInstance();
         GameObject prefab = Resources.Load("Card") as GameObject;
         bttn = new GameObject[cardManager.numOfWeapons()];
         for (int i = 0; i < cardManager.numOfWeapons(); i++)
@@ -104,5 +102,11 @@ public class ScrollRectSnap : MonoBehaviour {
     public void EndDrag()
     {
         dragging = false;
+    }
+
+    public void MakeSelection()
+    {
+        GameSession session = GameSession.Instance;
+        session.SelectACardWithIndex(minButtonNum);
     }
 }
