@@ -19,7 +19,8 @@ public class GameSession : MonoBehaviour {
     public Text ComputerCardText;
 
     public Text ReasonText;
-    public Text StatusText; 
+    public Text StatusText;
+    public Text ScoreText;
 
 	private static int loses = 0;
 	private static int wins = 0;
@@ -57,6 +58,8 @@ public class GameSession : MonoBehaviour {
 
         SetStatusString();
         SetReasonString();
+
+        ResetScoreText();
     }
 
     private void SetPlayerCardText()
@@ -107,5 +110,15 @@ public class GameSession : MonoBehaviour {
     private void SetReasonString()
     {
         ReasonText.text = cardManager.GetGameStatusReason(PlayerWeapon, ComputerWeapon);
+    }
+
+    private void ResetScoreText()
+    {
+        string sessionScore = "Wins - " + wins + " / Loses - " + loses;
+        if(ties > 0)
+        {
+            sessionScore += " / Ties - " + ties;
+        }
+        ScoreText.text = sessionScore;
     }
 }
