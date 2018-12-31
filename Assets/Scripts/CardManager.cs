@@ -63,7 +63,7 @@ public class CardManager : MonoBehaviour {
 
     public string GetGameStatusReason(WeaponData player, WeaponData computer)
     {
-        return "THE REAL REASON";
+        return player.GetReason(computer);
     }
 
     public Status GetGameStatus(WeaponData player, WeaponData computer)

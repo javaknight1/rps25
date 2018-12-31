@@ -37,4 +37,20 @@ public class WeaponData {
     {
         return this.reasons.ContainsKey(computer.weapon);
     }
+
+    public string GetReason(WeaponData computer)
+    {
+        if (this.IsWinner(computer))
+        {
+            return this.reasons[computer.weapon];
+        }
+        else if (computer.IsWinner(this))
+        {
+            return computer.reasons[this.weapon];
+        }
+        else
+        {
+            return "Tie Game!";
+        }
+    }
 }

@@ -20,7 +20,20 @@
   {
     "weapon": "dynamite",
     "description": "",
-    "reasons": {}
+    "reasons": {
+      "gun": "Dynamite outclasses Gun",
+      "rock": "Dynamite explodes Rock",
+      "sun": "Dynamite smoke blots out Sun",
+      "fire": "Dynamite starts fire",
+      "scissors": "Dynamite explodes scissors",
+      "axe": "Dynamite explodes Axe",
+      "snake": "Dynamite explodes Snake",
+      "monkey": "Dynamite explodes Monkey",
+      "female": "Dynamite explodes Female",
+      "male": "Dynamite explodes Male",
+      "tree": "Dynamite explodes Tree",
+      "cockroach": "Dynamite explodes Cockroach"
+    }
   },
   {
     "weapon": "nuke",
