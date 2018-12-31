@@ -7,7 +7,7 @@ public class CardManager : MonoBehaviour {
 
     private static CardManager Instance = null;
 
-    private WeaponData[] weapons;
+    public WeaponData[] weapons;
     private const string weaponsListFileName = "weapons.json";
 
     // Use this for initialization
@@ -16,8 +16,8 @@ public class CardManager : MonoBehaviour {
         if (File.Exists(filePath))
         {
             string dataAsJson = File.ReadAllText(filePath);
-            WeaponsData weaponData = WeaponsData.CreateFromJSON(dataAsJson);
-            this.weapons = weaponData.weapons;
+            JSONObject weaponsJson = new JSONObject(dataAsJson);
+            weapons = WeaponData.GetWeaponsFromJson(weaponsJson);
         }
         else
         {
@@ -60,5 +60,25 @@ public class CardManager : MonoBehaviour {
     {
         return Resources.Load<Sprite>("Sprites/Weapons/" + weapons[index].weapon);
     }
-	
+
+    public string GetGameStatusReason(WeaponData player, WeaponData computer)
+    {
+        return "THE REAL REASON";
+    }
+
+    public Status GetGameStatus(WeaponData player, WeaponData computer)
+    {
+        if (player.weapon == computer.weapon)
+        {
+            return Status.Tie;
+        }
+        else if (player.IsWinner(computer))
+        {
+            return Status.Win;
+        }
+        else
+        {
+            return Status.Lose;
+        }
+    }
 }

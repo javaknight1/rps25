@@ -85,11 +85,27 @@ public class GameSession : MonoBehaviour {
 
     private void SetStatusString()
     {
-        StatusText.text = "who knows?";
+        Status status = cardManager.GetGameStatus(PlayerWeapon, ComputerWeapon);
+
+        if (status == Status.Win)
+        {
+            wins++;
+            StatusText.text = "You Win!";
+        }
+        else if (status == Status.Lose)
+        {
+            loses++;
+            StatusText.text = "You Lost!";
+        }
+        else
+        {
+            ties++;
+            StatusText.text = "Tie Game!";
+        }
     }
 
     private void SetReasonString()
     {
-        ReasonText.text = "There is no reason";
+        ReasonText.text = cardManager.GetGameStatusReason(PlayerWeapon, ComputerWeapon);
     }
 }

@@ -1,24 +1,40 @@
 ﻿using UnityEngine;
+using System.Collections;
+using System.Collections.Generic;
+using System;
 
 [System.Serializable]
 public class WeaponData {
     public string weapon;
     public string description;
-    //public string artwork;  // name of artwork file
-    //public Object reasons;  // reasons of winning/losing
+    public Dictionary<string, string> reasons;
 
-    public static WeaponData CreateFromJSON(string jsonString)
+    public static WeaponData[] GetWeaponsFromJson(JSONObject jsonObject)
     {
-        return JsonUtility.FromJson<WeaponData>(jsonString);
+        List<WeaponData> weapons = new List<WeaponData>();
+
+        // go through each of the weapons
+        foreach (JSONObject w in jsonObject.list)
+        {
+            WeaponData weapon = new WeaponData();
+            weapon.weapon = w.GetField("weapon").str;
+            weapon.description = w.GetField("description").str;
+            weapon.reasons = new Dictionary<string, string>();
+            for (int i = 0; i < w.GetField("reasons").list.Count; i++)
+            {
+                string key = w.GetField("reasons").keys[i];
+                string value = w.GetField("reasons").GetField(key).str;
+                weapon.reasons.Add(key, value);
+            }
+
+            weapons.Add(weapon);
+        }
+
+        return weapons.ToArray();
     }
-}
 
-[System.Serializable]
-public class WeaponsData {
-    public WeaponData[] weapons;
-
-    public static WeaponsData CreateFromJSON(string jsonString)
+    public bool IsWinner(WeaponData computer)
     {
-        return JsonUtility.FromJson<WeaponsData>(jsonString);
+        return this.reasons.ContainsKey(computer.weapon);
     }
 }
