@@ -10,8 +10,8 @@
       "scissors": "Gun destroys Scissors",
       "snake": "Gun shoots Snake",
       "monkey": "Gun shoots Monkey",
-      "male": "Gun shoots Male",
-      "female": "Gun Shoots Female",
+      "man": "Gun shoots Man",
+      "woman": "Gun Shoots Woman",
       "tree": "Gun targets Tree",
       "cockroach": "Gun shoots Cockroach",
       "wolf": "Gun shoots Wolf"
@@ -29,8 +29,8 @@
       "axe": "Dynamite explodes Axe",
       "snake": "Dynamite explodes Snake",
       "monkey": "Dynamite explodes Monkey",
-      "female": "Dynamite explodes Female",
-      "male": "Dynamite explodes Male",
+      "woman": "Dynamite explodes Woman",
+      "man": "Dynamite explodes Man",
       "tree": "Dynamite explodes Tree",
       "cockroach": "Dynamite explodes Cockroach"
     }
@@ -38,120 +38,419 @@
   {
     "weapon": "nuke",
     "description": "",
-    "reasons": {}
+    "reasons": {
+      "dynamite": "Nuke outclasses Dynamite",
+      "gun": "Nuke outclasses Gun",
+      "rock": "Nuke incinerates Rock",
+      "sun": "Nuke has the power of Sun",
+      "fire": "Nuke starts massive Fire",
+      "scissors": "Nuke incinerates Scissors",
+      "snake": "Nuke incinerates Scissors",
+      "axe": "Nuke incinerates Axe",
+      "monkey": "Nuke incinerates Monkey",
+      "woman": "Nuke incinerates Woman",
+      "man": "Nuke incinerates Man",
+      "tree": "Nuke incinerates Tree"
+    }
   },
   {
     "weapon": "lightning",
     "description": "",
-    "reasons": {}
+    "reasons": {
+      "nuke": "Lightning defuses Nuke",
+      "dynamite": "Lightning ignites Dynamite",
+      "gun": "Lightning melts Gun",
+      "rock": "Lightning splits Rock",
+      "sun": "Lightning storm blocks Sun",
+      "fire": "Lightning starts Fire",
+      "scissors": "Lightning melts Scissors",
+      "axe": "Lightning strikes Axe",
+      "snake": "Lightning strikes Snake",
+      "monkey": "Lightning strikes Monkey",
+      "man": "Lightning strikes Man",
+      "woman": "Lightning strikes Man"
+    }
   },
   {
     "weapon": "devil",
     "description": "He may be seen as a myth, but he is very real. Secretly walking the streets and seeking whom he may devour. Stay and focus on your course, or you may have an appointment with the Devil.",
-    "reasons": {}
+    "reasons": {
+      "lightning": "Devil casts Lightning",
+      "nuke": "Devil inspires Nuke",
+      "dynamite": "Devil inspires Dynamite",
+      "gun": "Devil inspires Gun",
+      "rock": "Devil hurls Rock",
+      "sun": "Devil curses Sun",
+      "fire": "Devil breathes Fire",
+      "scissors": "Devil is immune to Scissors",
+      "axe": "Devil is immune to Axe",
+      "snakes": "Devil eats Snake",
+      "monkey": "Devil enrages monkey",
+      "woman": "Devil tempts Woman"
+    }
   },
 
   {
     "weapon": "dragon",
     "description": "You've probably read about him in ancient books. The stories about him are lengendary. All stories you have read are true. Careful of his power, as it takes a strong and wise warrior to harrness his power.",
-    "reasons": {}
+    "reasons": {
+      "devil": "Dragon commands Devil",
+      "lightning": "Dragon breathes Lightning",
+      "nuke": "Dragon lived before Nukes",
+      "dynamite": "Dragon flosses with Dynamite",
+      "gun": "Dragon is immune to Gun",
+      "rock": "Dragon rests upon Rock",
+      "sun": "Dragon blots out Sun",
+      "fire": "Dragon breathes Fire",
+      "scissors": "Dragon is immune to Scissors",
+      "axe": "Dragon is immune to Axe",
+      "snake": "Dragon spawns Snake",
+      "monkey": "Dragon chars Monkey"
+    }
   },
   {
     "weapon": "alien",
     "description": "Coming from another world, he brings power never seen by any man on Earth. Prepare for unexpected sorcery that comes from his ancient ancestors.",
-    "reasons": {}
+    "reasons": {
+      "dragon": "Alien vaporizes Dragon",
+      "devil": "Alien is a non-believer in Devil",
+      "lightning": "Alien shoots Lightning",
+      "nuke": "Alien defuses Nuke",
+      "dynamite": "Alien defuses Dynamite",
+      "gun": "Alien force-fields Gun",
+      "rock": "Alien vaporizes Rock",
+      "sun": "Alien destroys Sun",
+      "fire": "Alien fuses Fire",
+      "scissors": "Alien force-fields Scissors",
+      "axe": "Alien force-fields Axe",
+      "snake": "Alien mutates Snake"
+    }
   },
   {
     "weapon": "water",
     "description": "Very little can harmless. But in numbers, can be the dead of humanity.",
-    "reasons": {}
+    "reasons": {
+      "alien": "Water is toxic to Alien",
+      "dragon": "Water drowns Dragon",
+      "devil": "Water blesses Devil",
+      "lightning": "Water conducts Lightning",
+      "nuke": "Water short-circuits Nuke",
+      "dynamite": "Water douses Dynamite",
+      "gun": "Water rusts Gun",
+      "rock": "Water erodes Rock",
+      "sun": "Water erodes Sun",
+      "fire": "Water puts out Fire",
+      "scissors": "Water rusts Scissors",
+      "axe": "Water rusts Axe"
+    }
   },
   {
     "weapon": "cup",
     "description": "Fragil, yet with the right ingredients can prevent extinction.",
-    "reasons": {}
+    "reasons": {
+      "water": "Cup holds Water",
+      "alien": "Cup shapes craft of Alien",
+      "dragon": "Cup drowns Dragon",
+      "devil": "Cup blesses Devil",
+      "lightning": "Cup Focuses on Lightning",
+      "nuke": "Cup encases core of Nuke",
+      "dynamite": "Cup splashes Dynamite",
+      "gun": "Cup splashes Gun",
+      "rock": "Cup once made of Rock",
+      "fire": "Cup snuffs out Fire",
+      "sun": "Cup focuses on Sun",
+      "scissors": "Cup covers Scissors"
+    }
   },
   {
     "weapon": "wind",
     "description": "",
-    "reasons": {}
+    "reasons": {
+      "cup": "Wind tips over Cup",
+      "water": "Wind evaporates Water",
+      "alien": "Wind chokes Alien",
+      "dragon": "Wind freezes Dragon",
+      "devil": "Wind chokes Devil",
+      "lightning": "Wind creates Lightning",
+      "nuke": "Wind blows astray Nuke",
+      "dynamite": "Wind blows out Dynamite",
+      "gun": "Wind tarnishes Gun",
+      "rock": "Wind erodes Rock",
+      "sun": "Wind cools heat of Sun",
+      "fire": "Wind blows out Fire"
+    }
   },
 
   {
     "weapon": "moon",
     "description": "The single source of light in darkness provides it with power only few can understand.",
-    "reasons": {}
+    "reasons": {
+      "wind": "Moon has no Wind",
+      "cup": "Moon shaped like Cup",
+      "water": "Moon has no Water",
+      "alien": "Moon houses Alien",
+      "dragon": "Moon shines on Dragon",
+      "devil": "Moon terrifies Devil",
+      "lightning": "Moon is far above Lightning",
+      "nuke": "Moon is too far for Nuke",
+      "dynamite": "Moon suffocates Dynamite",
+      "gun": "Moon moonshines Gunfight",
+      "rock": "Moon shines on Rock",
+      "sun": "Moon eclipses Sun"
+    }
   },
   {
     "weapon": "paper",
     "description": "",
-    "reasons": {}
+    "reasons": {
+      "moon": "Paper Moon",
+      "wind": "Paper fans Wind",
+      "cup": "Paper mache Cup",
+      "water": "Paper floats on Water",
+      "alien": "Paper disproves Alien",
+      "dragon": "Paper rebukes Dragon",
+      "devil": "Paper rebukes Devil",
+      "lightning": "Paper defines Lightning",
+      "nuke": "Paper defines Nuke",
+      "dynamite": "Paper encases Dynamite",
+      "gun": "Paper outlaws Gun",
+      "rock": "Paper covers Rock"
+    }
   },
   {
     "weapon": "sponge",
     "description": "",
-    "reasons": {}
+    "reasons": {
+      "paper": "Sponge soaks Paper",
+      "moon": "Sponge looks like Moon",
+      "wind": "Sponge uses Air pockets",
+      "cup": "Sponge cleans Cup",
+      "water": "Sponge absorbs Water",
+      "alien": "Sponge intrigues Alien",
+      "dragon": "Sponge cleanses Dragon",
+      "devil": "Sponge cleanses Devil",
+      "lightning": "Sponge conducts Lightning",
+      "nuke": "Sponge cleans Nuke",
+      "dynamite": "Sponge soaks Dynamite",
+      "gun": "Sponge cleans Gun"
+    }
   },
   {
     "weapon": "wolf",
     "description": "Quick. Cunning. Sly. Vicious. The perfect combination of elements to create a beast that will strike into any human. If you lose control, this beast will turn on you when it's gets the chance.",
-    "reasons": {}
+    "reasons": {
+      "sponge": "Wolf chews up Sponge",
+      "paper": "Wolf chews up Paper",
+      "moon": "Wolf howls at Moon",
+      "wind": "Wolf breathes Air",
+      "cup": "Wolf drinks from Bowl",
+      "water": "Wolf drinks Water",
+      "alien": "Wolf chases Alien",
+      "dragon": "Wolf outruns Dragon",
+      "devil": "Wolf bites heiny of Devil",
+      "lightning": "Wolf outruns Lightning",
+      "nuke": "\"Wolf-2\" launches Nuke",
+      "dynamite": "Wolf outruns Dynamite"
+    }
   },
   {
     "weapon": "cockroach",
     "description": "The smallest of enemies, yet one of the most powerful. Powerful enough to withstand the likes of a nuclear holocaust. Don't allow this little foe to slip through your hands for one second.",
-    "reasons": {}
+    "reasons": {
+      "wolf": "Cockroach sleeps in fur of Wolf",
+      "sponge": "Cockroach nests in Sponge",
+      "paper": "Cockroach nests between Papers",
+      "moon": "Cockroach noctural with Moon",
+      "wind": "Cockroach breathes Air",
+      "cup": "Cockroach hides under Cup",
+      "water": "Cockroach drinks Water",
+      "alien": "Cockroach stows away with Alien",
+      "dragon": "Cockroach eats eggs of Dragon",
+      "devil": "Cockroach makes men Devils",
+      "lightning": "Cockroach hides from Lightning",
+      "nuke": "Cockroach survives Nuke"
+    }
   },
 
   {
     "weapon": "tree",
     "description": "A core mechanism to nature that provides the very air for life to breathe. Some may view as harmless, but with the right person at it's side, can conquier any mountain.",
-    "reasons": {}
+    "reasons": {
+      "cockroach": "Tree shelters Cockroach",
+      "wolf": "Tree shelters Wolf",
+      "sponge": "Tree outlives Sponge",
+      "paper": "Tree creates Paper",
+      "moon": "Tree blocks Moon",
+      "wind": "Tree produces Air",
+      "cup": "Tree wood creates cup",
+      "water": "Tree drinks Water",
+      "alien": "Tree ensnares Alien ship",
+      "dragon": "Tree shelters Dragon",
+      "devil": "Tree imprisons Devil",
+      "lightning": "Tree attracts Lightning"
+    }
   },
   {
-    "weapon": "male",
+    "weapon": "man",
     "description": "He may seem strong, which he is, but with power comes many weaknesses.",
-    "reasons": {}
+    "reasons": {
+      "tree": "Man plants Tree",
+      "cockroach": "Man steps on Cockroach",
+      "wolf": "Man tames Wolf",
+      "sponge": "Man cleans with Sponge",
+      "paper": "Man writes on Paper",
+      "moon": "Man travels to Moon",
+      "wind": "Man breathes Air",
+      "cup": "Man drinks from Cup",
+      "water": "Man drinks Water",
+      "alien": "Man disproves Alien",
+      "dragon": "Man slays Dragon",
+      "devil": "Man exorcises Devil"
+    }
   },
   {
-    "weapon": "female",
+    "weapon": "woman",
     "description": "She may seem like a weak foe, but don't underestimate her cunningness and mood swings.",
-    "reasons": {}
+    "reasons": {
+      "man": "Woman tempts Man",
+      "tree": "Woman plants Tree",
+      "cockroach": "Woman steps on Cockroach",
+      "wolf": "Woman tames Wolf",
+      "sponge": "Woman cleans with Sponge",
+      "paper": "Woman writes on Paper",
+      "moon": "Woman aligns with Moon",
+      "wind": "Woman breathes Air",
+      "cup": "Woman drinks from Cup",
+      "alien": "Woman disproves Alien",
+      "dragon": "Woman subdues Dragon",
+      "water": "Woman drinks Water"
+    }
   },
   {
     "weapon": "monkey",
     "description": "",
-    "reasons": {}
+    "reasons": {
+      "woman": "Monkey flings poop at Woman",
+      "man": "Monkey flings poop at Man",
+      "tree": "Monkey lives in Tree",
+      "cockroach": "Monkey eats Cockroach",
+      "wolf": "Monkey enrages Wolf",
+      "sponge": "Monkey rips up Sponge",
+      "paper": "Monkey rips up Paper",
+      "moon": "Monkey screeches at Moon",
+      "wind": "Monkey breathes Air",
+      "cup": "Monkey smashes Cup",
+      "water": "Monkey drinks Water",
+      "alien": "Monkey infuriates Alien"
+    }
   },
   {
     "weapon": "snake",
     "description": "",
-    "reasons": {}
+    "reasons": {
+      "monkey": "Snake bites Monkey",
+      "woman": "Snake bits Woman",
+      "man": "Snake bites Man",
+      "tree": "Snake lives in Tree",
+      "cockroach": "Snake eats Cockroach",
+      "wolf": "Snake bites Wolf",
+      "sponge": "Snake swallows Sponge",
+      "paper": "Snake nests in Paper",
+      "moon": "Snake noctural with Moon",
+      "wind": "Snake breathes Air",
+      "cup": "Snake sleeps in Cup",
+      "water": "Snake drinks Water"
+    }
   },
 
   {
     "weapon": "axe",
     "description": "A weapon only yielded by the most burly of men with plaid shirts. Very few have had the ability to tap into it's full potential of power. Do you have the skills neccessary to weild this weapon?",
-    "reasons": {}
+    "reasons": {
+      "snake": "Axe chops Snake",
+      "monkey": "Axe cleaves Monkey",
+      "woman": "Axe cleaves Woman",
+      "man": "Axe cleaves Man",
+      "tree": "Axe chops down Tree",
+      "cockroach": "Axe chops Cockroach",
+      "wolf": "Axe cleaves Wolf",
+      "sponge": "Axe chops Sponge",
+      "paper": "Axe slices Paper",
+      "moon": "Axe reflects Moon",
+      "Wind": "Axe flies through Wind",
+      "cup": "Axe breaks Cup"
+    }
   },
   {
     "weapon": "scissors",
     "description": "",
-    "reasons": {}
+    "reasons": {
+      "axe": "Scissors are sharper than Axe",
+      "snake": "Scissors star Snake",
+      "monkey": "Scissors stab Monkey",
+      "woman": "Scissors cut Woman's hair",
+      "man": "Scissors cut Man's beard",
+      "tree": "Scissors carve Tree",
+      "cockroach": "Scissors stab Cockroach",
+      "wolf": "Scissors cut Wolf's fur",
+      "sponge": "Scissors cut up Sponge",
+      "paper": "Scissors cut Paper",
+      "moon": "Scissors reflect Moon",
+      "wind": "Scissors swish through Wind"
+    }
   },
   {
     "weapon": "fire",
     "description": "One of the earliest weapons discovered by man, yet it's power still haunts and injects fear into man's heart. Weild this weapon with caution or it will destroy you.",
-    "reasons": {}
+    "reasons": {
+      "scissors": "Fire melts Scissors",
+      "axe": "Fire forges Axe",
+      "snake": "Fire burns Snake",
+      "monkey": "Fire burns Monkey",
+      "man": "Fire burns Man",
+      "woman": "Fire burns Woman",
+      "tree": "Fire burns down Tree",
+      "cockroach": "Fire burns Cockroach",
+      "wolf": "Fire burns Wolf",
+      "sponge": "Fire burns Sponge",
+      "paper": "Fire burns Paper",
+      "moon": "Fire campfires by Moonlight"
+    }
   },
   {
     "weapon": "sun",
     "description": "",
-    "reasons": {}
+    "reasons": {
+      "fire": "Sun is made of Fire",
+      "scissors": "Sun melts Scissors",
+      "axe": "Sun melts Axe",
+      "snake": "Sun warms Snake",
+      "monkey": "Sun warms Monkey",
+      "woman": "Sun warms Woman",
+      "man": "Sun warms Man",
+      "tree": "Sun feeds Tree",
+      "cockroach": "Sun warms Cockroach",
+      "wolf": "Sun warms Wolf",
+      "sponge": "Sun dries up Sponge",
+      "paper": "Sun shines trhough Paper"
+    }
   },
   {
     "weapon": "rock",
     "description": "Not just an ordinary rock. This special rock can easily defeat half of the enemies here. He may seem small and weak, but he sure can pack a punch when you least expect it.",
-    "reasons": {}
+    "reasons": {
+      "sun": "Rock shades Sun",
+      "fire": "Rock pounds out Fire",
+      "scissors": "Rock smashes Scissors",
+      "axe": "Rock chips Axe",
+      "snake": "Rock crushes Snake",
+      "monkey": "Rock crushes Monkey",
+      "woman": "Rock crushes Woman",
+      "man": "Rock crushes Man",
+      "tree": "Rock blocks Tree roots",
+      "cockroach": "Rock squishes Cockroach",
+      "wolf": "Rock crushes Wolf",
+      "sponge": "Rock crushes Sponge"
+    }
   }
 ]
