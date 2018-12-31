@@ -5,7 +5,9 @@ using UnityEngine.SceneManagement;
 
 public class OnMenuTouch : MonoBehaviour {
 
-	// Use this for initialization
+	/*
+	 *  Used for MainMenu scene
+	 */
 	public void OnNewGameButtonTouch () {
         SceneManager.LoadScene("Game");
 	}
@@ -17,5 +19,12 @@ public class OnMenuTouch : MonoBehaviour {
     public void OnHighscoreButtonTouch(){
         // TODO: Implement function
     }
-		
+
+    /*
+     *  Used for Game scene
+     */
+    public void OnMainMenuButtonTouch()
+    {
+        SceneManager.LoadScene("MainMenu");
+    }
 }
