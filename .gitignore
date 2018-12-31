@@ -34,6 +34,7 @@ sysinfo.txt
 # Builds
 *.apk
 *.unitypackage
+.DS_Store
 
 # Build Folders
 ios/
