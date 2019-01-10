@@ -89,22 +89,28 @@ public class GameSession : MonoBehaviour {
     private void SetStatusString()
     {
         Status status = cardManager.GetGameStatus(PlayerWeapon, ComputerWeapon);
+        AddToTheTotalPlayerPrefCount(PlayerPrefKeys.PlayerWeaponKey(PlayerWeapon.weapon));
+        AddToTheTotalPlayerPrefCount(PlayerPrefKeys.ComputerWeaponKey(ComputerWeapon.weapon));
 
         if (status == Status.Win)
         {
             wins++;
+            AddToTheTotalPlayerPrefCount(PlayerPrefKeys.TOTALWINS);
             StatusText.text = "You Win!";
         }
         else if (status == Status.Lose)
         {
             loses++;
+            AddToTheTotalPlayerPrefCount(PlayerPrefKeys.TOTALLOSES);
             StatusText.text = "You Lost!";
         }
         else
         {
             ties++;
+            AddToTheTotalPlayerPrefCount(PlayerPrefKeys.TOTALTIES);
             StatusText.text = "Tie Game!";
         }
+
     }
 
     private void SetReasonString()
@@ -120,5 +126,18 @@ public class GameSession : MonoBehaviour {
             sessionScore += " / Ties - " + ties;
         }
         ScoreText.text = sessionScore;
+    }
+
+    private void AddToTheTotalPlayerPrefCount(string key)
+    {
+        if (PlayerPrefs.HasKey(key))
+        {
+            int currentTotal = PlayerPrefs.GetInt(key);
+            PlayerPrefs.SetInt(key, currentTotal+1);
+        }
+        else
+        {
+            PlayerPrefs.SetInt(key, 1);
+        }
     }
 }
