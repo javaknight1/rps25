@@ -16,17 +16,73 @@ public class HighscoreHandler : MonoBehaviour {
     public Text topComputerWeapon;
     public Text topUserWeapon;
 
+    void Start()
+    {
+        UpdateScores();
+    }
+
+    void Update()
+    {
+        UpdateScores();
+    }
+
     // Use this for initialization
-    void Start () {
-        sessionWins.text = PlayerPrefs.GetInt(PlayerPrefKeys.SESSIONWINS).ToString();
-        sessionLoses.text = PlayerPrefs.GetInt(PlayerPrefKeys.SESSIONLOSES).ToString();
-        sessionTies.text = PlayerPrefs.GetInt(PlayerPrefKeys.SESSIONTIES).ToString();
+    void UpdateScores () {
 
-        totalWins.text = PlayerPrefs.GetInt(PlayerPrefKeys.TOTALWINS).ToString();
-        totalLoses.text = PlayerPrefs.GetInt(PlayerPrefKeys.TOTALLOSES).ToString();
-        totalTies.text = PlayerPrefs.GetInt(PlayerPrefKeys.TOTALTIES).ToString();
+        sessionWins.text = GetIfAvailable(PlayerPrefKeys.SESSIONWINS).ToString();
+        sessionLoses.text = GetIfAvailable(PlayerPrefKeys.SESSIONLOSES).ToString();
+        sessionTies.text = GetIfAvailable(PlayerPrefKeys.SESSIONTIES).ToString();
 
-        //sessionWins.text = PlayerPrefs.GetInt(PlayerPrefKeys.SESSIONWINS).ToString();
-        //sessionWins.text = PlayerPrefs.GetInt(PlayerPrefKeys.SESSIONWINS).ToString();
+        totalWins.text = GetIfAvailable(PlayerPrefKeys.TOTALWINS).ToString();
+        totalLoses.text = GetIfAvailable(PlayerPrefKeys.TOTALLOSES).ToString();
+        totalTies.text = GetIfAvailable(PlayerPrefKeys.TOTALTIES).ToString();
+
+        WeaponData topUserWeaponData = null;
+        foreach (WeaponData weapon in CardManager.GetInstance().weapons)
+        {
+            if(topUserWeaponData == null)
+            {
+                topUserWeaponData = weapon;
+                continue;
+            }
+
+            int maxWeaponCount = GetIfAvailable(PlayerPrefKeys.PlayerWeaponKey(topUserWeaponData.weapon));
+            int currentWeaponCount = GetIfAvailable(PlayerPrefKeys.PlayerWeaponKey(weapon.weapon));
+            if (currentWeaponCount > maxWeaponCount)
+            {
+                topUserWeaponData = weapon;
+            }
+        }
+        topUserWeapon.text = topUserWeaponData.weapon + " (" + GetIfAvailable(PlayerPrefKeys.PlayerWeaponKey(topUserWeaponData.weapon)) + ")";
+
+        WeaponData topComputerWeaponData = null;
+        foreach (WeaponData weapon in CardManager.GetInstance().weapons)
+        {
+            if (topComputerWeaponData == null)
+            {
+                topComputerWeaponData = weapon;
+                continue;
+            }
+
+            int maxWeaponCount = GetIfAvailable(PlayerPrefKeys.ComputerWeaponKey(topComputerWeaponData.weapon));
+            int currentWeaponCount = GetIfAvailable(PlayerPrefKeys.ComputerWeaponKey(weapon.weapon));
+            if (currentWeaponCount > maxWeaponCount)
+            {
+                topComputerWeaponData = weapon;
+            }
+        }
+        topComputerWeapon.text = topComputerWeaponData.weapon + " (" + GetIfAvailable(PlayerPrefKeys.PlayerWeaponKey(topComputerWeaponData.weapon)) + ")";
+    }
+
+    private int GetIfAvailable(string key)
+    {
+        if (PlayerPrefs.HasKey(key))
+        {
+            return PlayerPrefs.GetInt(key);
+        }
+        else
+        {
+            return 0;
+        }
     }
 }

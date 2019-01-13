@@ -28,4 +28,10 @@ public class OnMenuTouch : MonoBehaviour {
         GameSession.SaveSessionData();
         SceneManager.LoadScene("MainMenu");
     }
+
+    public void OnClearHistoryButtonTouch()
+    {
+        PlayerPrefs.DeleteAll();
+        PlayerPrefs.Save();
+    }
 }
