@@ -50,9 +50,6 @@ public class GameSession : MonoBehaviour {
         int computerIndex = rand.Next(cardManager.numOfWeapons()-1);
         ComputerWeapon = cardManager.getWeaponObject(computerIndex);
 
-        // TODO: Check who wins
-        // TODO: Update counters
-
         SetPlayerCardText();
         SetComputerCardText();
 
@@ -128,7 +125,7 @@ public class GameSession : MonoBehaviour {
         ScoreText.text = sessionScore;
     }
 
-    private void AddToTheTotalPlayerPrefCount(string key)
+    private static void AddToTheTotalPlayerPrefCount(string key)
     {
         if (PlayerPrefs.HasKey(key))
         {
@@ -139,5 +136,26 @@ public class GameSession : MonoBehaviour {
         {
             PlayerPrefs.SetInt(key, 1);
         }
+    }
+
+    public static void SaveSessionData()
+    {
+        /*
+         * Update PlayerPrefs for Session stats
+         */
+        if(wins > loses)
+        {
+            AddToTheTotalPlayerPrefCount(PlayerPrefKeys.SESSIONWINS);
+        }
+        else if (loses > wins)
+        {
+            AddToTheTotalPlayerPrefCount(PlayerPrefKeys.SESSIONLOSES);
+        }
+        else
+        {
+            AddToTheTotalPlayerPrefCount(PlayerPrefKeys.SESSIONTIES);
+        }
+
+        PlayerPrefs.Save();
     }
 }
