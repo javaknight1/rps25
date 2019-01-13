@@ -25,6 +25,7 @@ public class OnMenuTouch : MonoBehaviour {
      */
     public void OnMainMenuButtonTouch()
     {
+        GameSession.SaveSessionData();
         SceneManager.LoadScene("MainMenu");
     }
 }
