@@ -53,7 +53,15 @@ public class HighscoreHandler : MonoBehaviour {
                 topUserWeaponData = weapon;
             }
         }
-        topUserWeapon.text = topUserWeaponData.weapon + " (" + GetIfAvailable(PlayerPrefKeys.PlayerWeaponKey(topUserWeaponData.weapon)) + ")";
+        if (GetIfAvailable(PlayerPrefKeys.PlayerWeaponKey(topUserWeaponData.weapon)) > 0)
+        {
+            topUserWeapon.text = topUserWeaponData.weapon + " (" + GetIfAvailable(PlayerPrefKeys.PlayerWeaponKey(topUserWeaponData.weapon)) + ")";
+
+        }
+        else
+        {
+            topUserWeapon.text = "N/A";
+        }
 
         WeaponData topComputerWeaponData = null;
         foreach (WeaponData weapon in CardManager.GetInstance().weapons)
@@ -71,7 +79,14 @@ public class HighscoreHandler : MonoBehaviour {
                 topComputerWeaponData = weapon;
             }
         }
-        topComputerWeapon.text = topComputerWeaponData.weapon + " (" + GetIfAvailable(PlayerPrefKeys.PlayerWeaponKey(topComputerWeaponData.weapon)) + ")";
+        if(GetIfAvailable(PlayerPrefKeys.ComputerWeaponKey(topComputerWeaponData.weapon)) > 0)
+        {
+            topComputerWeapon.text = topComputerWeaponData.weapon + " (" + GetIfAvailable(PlayerPrefKeys.ComputerWeaponKey(topComputerWeaponData.weapon)) + ")";
+        }
+        else
+        {
+            topComputerWeapon.text = "N/A";
+        }
     }
 
     private int GetIfAvailable(string key)
