@@ -108,5 +108,6 @@ public class ScrollRectSnap : MonoBehaviour {
     {
         GameSession session = GameSession.Instance;
         session.SelectACardWithIndex(minButtonNum);
+        AdController.instance.ShowAd();
     }
 }
