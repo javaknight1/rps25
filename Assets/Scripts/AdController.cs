@@ -5,8 +5,13 @@ using UnityEngine.Monetization;
 
 public class AdController : MonoBehaviour {
 
-    public static AdController instance = null;
+    public static AdController Instance { get; private set; }
+
+#if UNITY_IOS
+    private string store_id = "3005353";
+#else
     private string store_id = "3005352";
+#endif
     private string video_ad = "video";
     private string rewarded_video_ad = "rewardedVideo";
     private string banner_ad = "bannerAd";
@@ -18,16 +23,14 @@ public class AdController : MonoBehaviour {
 
     void Awake()
     {
-        if (instance != null)
+        if (Instance == null)
         {
-            DestroyObject(gameObject);
+            Instance = this;
         }
-        else
+        else if (Instance != this)
         {
-            instance = this;
-            DontDestroyOnLoad(gameObject);
+            Destroy(gameObject);
         }
-
     }
 
     // Update is called once per frame
