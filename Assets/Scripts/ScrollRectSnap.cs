@@ -30,7 +30,7 @@ public class ScrollRectSnap : MonoBehaviour {
             card.artwork = cardManager.getWeaponArtworkSprite(i);
 
             GameObject go = Instantiate(prefab) as GameObject;
-            go.transform.position = new Vector2(i * 300f, 0);
+            go.transform.position = new Vector2(i * (Screen.width*0.65f), 0);
             go.GetComponent<CardDisplay>().DefineCard(card);
             go.transform.SetParent(panel.transform, false);
 
