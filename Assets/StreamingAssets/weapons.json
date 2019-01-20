@@ -1,7 +1,7 @@
 ﻿[
   {
     "weapon": "gun",
-    "description": "",
+    "description": "Shoot! Shoot! Bang! Bang! Hold your second amendment and bare your arms as you protect yourself from your enemies.",
     "reasons": {
       "rock": "Gun targets Rock",
       "sun":  "Gun shoots at Sun",
@@ -19,7 +19,7 @@
   },
   {
     "weapon": "dynamite",
-    "description": "",
+    "description": "As the little brother to the Nuke, this ammunition is easy to use, but powerful enough to demolish an entier building.",
     "reasons": {
       "gun": "Dynamite outclasses Gun",
       "rock": "Dynamite explodes Rock",
@@ -37,7 +37,7 @@
   },
   {
     "weapon": "nuke",
-    "description": "",
+    "description": "This weapon has been used as a threat as a destroyer of Earth with one detination. Be careful, or you could kill yourself.",
     "reasons": {
       "dynamite": "Nuke outclasses Dynamite",
       "gun": "Nuke outclasses Gun",
@@ -55,7 +55,7 @@
   },
   {
     "weapon": "lightning",
-    "description": "",
+    "description": "As unpredictable, this natural disaster can appear anywhere ruining anyone's day.",
     "reasons": {
       "nuke": "Lightning defuses Nuke",
       "dynamite": "Lightning ignites Dynamite",
@@ -164,7 +164,7 @@
   },
   {
     "weapon": "wind",
-    "description": "",
+    "description": "The silent killer.",
     "reasons": {
       "cup": "Wind tips over Cup",
       "water": "Wind evaporates Water",
@@ -201,7 +201,7 @@
   },
   {
     "weapon": "paper",
-    "description": "",
+    "description": "At first glance, you may think this weapon can easily been defeated by anything, but hold your breath as this classic option could be one of your best options.",
     "reasons": {
       "moon": "Paper Moon",
       "wind": "Paper fans Wind",
@@ -219,7 +219,7 @@
   },
   {
     "weapon": "sponge",
-    "description": "",
+    "description": "With the ability to hold liquids, this object will surprise you with other special abilities.",
     "reasons": {
       "paper": "Sponge soaks Paper",
       "moon": "Sponge looks like Moon",
@@ -328,7 +328,7 @@
   },
   {
     "weapon": "monkey",
-    "description": "",
+    "description": "This mammal may seem cute, but with unpredictable actions and undetermined amount of strength, it can have a suprising amount of power.",
     "reasons": {
       "woman": "Monkey flings poop at Woman",
       "man": "Monkey flings poop at Man",
@@ -346,7 +346,7 @@
   },
   {
     "weapon": "snake",
-    "description": "",
+    "description": "As the deceptive animal of the Garden of Eden, it has been know as the original of evil. Dread carefully to not cross with this creature.",
     "reasons": {
       "monkey": "Snake bites Monkey",
       "woman": "Snake bits Woman",
@@ -383,7 +383,7 @@
   },
   {
     "weapon": "scissors",
-    "description": "",
+    "description": "Cut! Cut! Don't underestimate this classic option.",
     "reasons": {
       "axe": "Scissors are sharper than Axe",
       "snake": "Scissors star Snake",
@@ -419,7 +419,7 @@
   },
   {
     "weapon": "sun",
-    "description": "",
+    "description": "Seen as the all seeing eye of earth, this almighty Sun will obliterate it's enemies.",
     "reasons": {
       "fire": "Sun is made of Fire",
       "scissors": "Sun melts Scissors",
